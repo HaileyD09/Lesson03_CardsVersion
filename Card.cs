@@ -1,7 +1,11 @@
 namespace Toolkit;
 
-public record Suit(string Name, string Symbol, ConsoleColor Color)
+public record Suit
 {
+    public string Name { get; }
+    public string Symbol { get; }
+    public ConsoleColor Color { get; }
+
     public static readonly Suit Hearts = new("Hearts", "♥", ConsoleColor.Red);
     public static readonly Suit Diamonds = new("Diamonds", "♦", ConsoleColor.Red);
     public static readonly Suit Clubs = new("Clubs", "♣", ConsoleColor.Black);
@@ -14,8 +18,11 @@ public record Suit(string Name, string Symbol, ConsoleColor Color)
         Color = color;
     }
 }
-public record Value(string Label, int Rank)
+public record Value
 {
+    public string Label { get; }
+    public int Rank { get; }
+
     public static readonly Value Ace = new("A", 1);
     public static readonly Value Two = new("2", 2);
     public static readonly Value Three = new("3", 3);

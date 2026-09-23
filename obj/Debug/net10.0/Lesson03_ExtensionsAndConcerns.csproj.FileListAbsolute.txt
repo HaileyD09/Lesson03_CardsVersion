@@ -1,0 +1,4 @@
+C:\Users\jcox\Documents\GitHub\Lesson03_CardsVersion\obj\Debug\net10.0\Lesson03_ExtensionsAndConcerns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jcox\Documents\GitHub\Lesson03_CardsVersion\obj\Debug\net10.0\Lesson03_ExtensionsAndConcerns.AssemblyInfoInputs.cache
+C:\Users\jcox\Documents\GitHub\Lesson03_CardsVersion\obj\Debug\net10.0\Lesson03_ExtensionsAndConcerns.AssemblyInfo.cs
+C:\Users\jcox\Documents\GitHub\Lesson03_CardsVersion\obj\Debug\net10.0\Lesson03_ExtensionsAndConcerns.csproj.CoreCompileInputs.cache

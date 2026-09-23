@@ -33,11 +33,13 @@ public record Deck
 
     public Deck Split()
     {
+        throw new NotImplementedException("Split method is not implemented yet.");
         // TODO: Implement the Split method to return a new Deck with half-ish of the cards.
     }
 
     public Deck Cut()
     {
+        throw new NotImplementedException("Cut method is not implemented yet.");
         // TODO: How is Cut different from Split? 
     }
 
