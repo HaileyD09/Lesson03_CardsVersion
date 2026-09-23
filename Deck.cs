@@ -5,6 +5,8 @@ public record Deck
     public static Deck CreateStandardDeck() => new Deck();
 
     private readonly List<Card> _cards;
+    
+    private Deck(List<Card> fromCards) => _cards = fromCards;
 
     private Deck()
     {
@@ -33,6 +35,9 @@ public record Deck
 
     public Deck Split()
     {
+        Deck other = new Deck(_cards.Take(_cards.Count / 2).ToList());
+        _cards.RemoveRange(0, _cards.Count / 2);
+        return other;
         throw new NotImplementedException("Split method is not implemented yet.");
         // TODO: Implement the Split method to return a new Deck with half-ish of the cards.
     }
@@ -55,7 +60,7 @@ public record Deck
 
     public List<Card> Deal(int count)
     {
-        var dealtCards = [];
+        var dealtCards = new List<Card>();
         for (int i = 0; i < count; i++)
         {
             dealtCards.Add(DealOne());
