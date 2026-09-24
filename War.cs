@@ -15,4 +15,10 @@ public static class WarRules
             Deck player2 = deck.Split();
         }
     }
+    
+    extension(Card card)
+    {
+        public int WarValue => card.Value.Rank == 1 ? 14: 
+        card.Value.Rank;
+    }
 }

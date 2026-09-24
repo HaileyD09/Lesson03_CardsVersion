@@ -38,14 +38,15 @@ public record Deck
         Deck other = new Deck(_cards.Take(_cards.Count / 2).ToList());
         _cards.RemoveRange(0, _cards.Count / 2);
         return other;
-        throw new NotImplementedException("Split method is not implemented yet.");
-        // TODO: Implement the Split method to return a new Deck with half-ish of the cards.
     }
 
-    public Deck Cut()
+    public void Cut(int cutPosition)
     {
-        throw new NotImplementedException("Cut method is not implemented yet.");
-        // TODO: How is Cut different from Split? 
+        // TODO: How is Cut different from Split?
+        // It is one deck and puts top beneath bottom versus split returns two decks
+        var reordered = _cards.Skip(cutPosition).Concat(_cards.Take(cutPosition)).ToList();
+        _cards.Clear();
+        _cards.AddRange(reordered);
     }
 
     public Card DealOne()
