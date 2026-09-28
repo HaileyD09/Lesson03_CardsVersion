@@ -11,8 +11,22 @@ public static class WarRules
         public void PlayWar(Random random)
         {
             deck.Shuffle(random);
-            Deck player1 = deck;
-            Deck player2 = deck.Split();
+            Deck player1 = deck.Split();
+            Deck player2 = deck;
+            while (player1.Count > 0 && player2.Count > 0)
+            {
+                Card card1 = player1.DealOne();
+                Card card2 = player2.DealOne();
+                if (card1.WarValue > card2.WarValue)
+                {
+                    player1.AddCard(card1);
+                }
+                else if (card2.WarValue > card1.WarValue)
+                {
+                    player1.AddCard(card2);
+                }
+                
+            }
         }
     }
     

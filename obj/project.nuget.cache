@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YoGLg4YpXq8=",
+  "dgSpecHash": "q0mVCepENfk=",
   "success": true,
   "projectFilePath": "/Users/haileyduan/Robotics/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/haileyduan/.nuget/packages/languageext.core/5.0.0-beta-77/languageext.core.5.0.0-beta-77.nupkg.sha512"
+  ],
   "logs": []
 }

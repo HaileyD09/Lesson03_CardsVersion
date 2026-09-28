@@ -17,3 +17,6 @@ C:/Users/jcox/Documents/GitHub/Lesson03_CardsVersion/obj/Debug/net10.0/Lesson03_
 /Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/Debug/net10.0/Lesson03_ExtensionsAndConcerns.pdb
 /Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/Debug/net10.0/Lesson03_ExtensionsAndConcerns.genruntimeconfig.cache
 /Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/Debug/net10.0/ref/Lesson03_ExtensionsAndConcerns.dll
+/Users/haileyduan/Robotics/Lesson03_CardsVersion/bin/Debug/net10.0/LanguageExt.Core.dll
+/Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/Debug/net10.0/Lesson03_ExtensionsAndConcerns.csproj.AssemblyReference.cache
+/Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/Debug/net10.0/Lesson03.D43189CA.Up2Date

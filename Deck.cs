@@ -1,3 +1,5 @@
+using LanguageExt;
+
 namespace Toolkit;
 
 public record Deck
@@ -58,13 +60,26 @@ public record Deck
         _cards.RemoveAt(0);
         return card;
     }
+    
+    public void AddCard(Card card)
+    {
+        _cards.Add(card);
+    }
+    /// <summary>
+    /// A new List of Cards containing the number of cards requested
+    /// OR the number of cards remaining in this Deck.
+    /// </summary>
+    /// <param name="count"></param>
+    /// <returns></returns>
 
     public List<Card> Deal(int count)
     {
         var dealtCards = new List<Card>();
         for (int i = 0; i < count; i++)
         {
-            dealtCards.Add(DealOne());
+            var card = DealOne();
+           if(card is not null)
+               dealtCards.Add(card);
         }
         return dealtCards;
     }
