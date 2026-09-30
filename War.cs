@@ -1,5 +1,6 @@
 namespace Toolkit.Rules.War;
 
+//finish writing code
 public static class WarRules
 {
     extension(Deck deck)

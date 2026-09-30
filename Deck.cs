@@ -6,7 +6,7 @@ public record Deck
 {
     public static Deck CreateStandardDeck() => new Deck();
 
-    private readonly List<Card> _cards;
+    private List<Card> _cards;
     
     private Deck(List<Card> fromCards) => _cards = fromCards;
 
@@ -51,6 +51,24 @@ public record Deck
         _cards.AddRange(reordered);
     }
 
+    public Deck Cut(Random random)
+    {
+        var cutPoint = random.Next(_cards.Count);
+        var otherHalf = new Deck([.._cards[..cutPoint]]);
+        // make cards equal to the part of cards that is after the cutPoint.
+        // take away all the cards before cutpoint.
+        // only use the cards /after/ cutPoint.
+        _cards = [.. _cards[cutPoint..]];
+        // _cards becomes....
+        //      ^[ Collection Expression.
+        //       ^.. take all the items in (below) one-by-one.
+        //          ^_cards[  from _cards
+        //                 ^cutpoint..] starting from index 'cutPoint' to the end.
+        //                            ^] and that's all.
+        return otherHalf;
+        
+    }
+
     public Card DealOne()
     {
         if (_cards.Count == 0)
@@ -82,6 +100,20 @@ public record Deck
                dealtCards.Add(card);
         }
         return dealtCards;
+    }
+
+    public void AddCardsOnTop(params List<Card> cards)
+        => _cards = [.. cards, .. _cards];
+
+    public void AddCardsOnBottom(params List<Card> cards)
+        => _cards = [.. _cards, .. cards];
+
+    public void InsertCardsRandomly(Random random, params List<Card>[] cards)
+    {
+        var otherHalf = Cut(random);
+        // _cards get the value:
+        // _ cards followed by the newly added 'cards' then the second half.
+        _cards = [.. _cards, ..cards, ..otherHalf._cards];
     }
 
     public int Count => _cards.Count;
