@@ -16,7 +16,7 @@ public static class WarRules
             var round = 0;
             while (player1.Count > 0 && player2.Count > 0 && round < 1000)
             {
-                Console.WriteLine($"Player1: {player1.Count}, Player2: {player2.Count}");
+                //Console.WriteLine($"Player1: {player1.Count}, Player2: {player2.Count}");
                 Card card1 = player1.DealOne();
                 Card card2 = player2.DealOne();
                 if (card1.WarValue > card2.WarValue)

@@ -16,7 +16,15 @@ public static class BlackjackRules
             Console.WriteLine($"Your hand: {string.Join(", ", playerHand)}");
             Console.WriteLine($"Dealer shows: {dealerHand[0]}");
             var playerTotal = playerHand.Sum(card => card.BlackjackValue);
+            while (playerTotal > 21 && playerHand.Any(card => card.Value.Rank == 1))
+            {
+                playerTotal -= 10;
+            }
             var dealerTotal = dealerHand.Sum(card => card.BlackjackValue);
+            while (dealerTotal > 21 && dealerHand.Any(card => card.Value.Rank == 1))
+            {
+                dealerTotal -= 10;
+            }
             Console.WriteLine($"Your total: {playerTotal}");
             
             var input = "h";
@@ -37,7 +45,14 @@ public static class BlackjackRules
                     playerTotal = playerHand.Sum(card => card.BlackjackValue);  // recalculate total
                     Console.WriteLine($"You drew: {newCard}");
                     Console.WriteLine($"Your total: {playerTotal}");
+                    
+                    while (playerTotal > 21 && playerHand.Any(card => card.Value.Rank == 1))
+                    {
+                        playerTotal -= 10;
+                    }
+                    
                 }
+                
             }
             
             if (playerTotal > 21)
@@ -54,6 +69,11 @@ public static class BlackjackRules
                     dealerHand.Add(newCard);
                     dealerTotal = dealerHand.Sum(card => card.BlackjackValue);
                     Console.WriteLine($"Dealer drew: {newCard}");
+                    
+                    while (dealerTotal > 21 && dealerHand.Any(card => card.Value.Rank == 1))
+                    {
+                        dealerTotal -= 10;
+                    }
                 }
                 
                 if (dealerTotal > 21)
