@@ -113,7 +113,7 @@ public record Deck
         var otherHalf = Cut(random);
         // _cards get the value:
         // _ cards followed by the newly added 'cards' then the second half.
-        _cards = [.. _cards, ..cards, ..otherHalf._cards];
+        _cards = [.. _cards, ..cards.SelectMany(card => card), ..otherHalf._cards];
     }
 
     public int Count => _cards.Count;

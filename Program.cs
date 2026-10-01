@@ -13,4 +13,4 @@ myDeck.Shuffle(random);
 
 myDeck.PlayWar(random);
 
-myDeck.PlayBlackJack(random);
+//myDeck.PlayBlackJack(random);
