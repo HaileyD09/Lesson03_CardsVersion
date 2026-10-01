@@ -1,4 +1,5 @@
-using Toolkit; 
+using Toolkit;
+using Toolkit.Rules;
 using Toolkit.Rules.War; //Behaviors: Verbs that an object /can do/ OR /have done to/ it
                         //I play war WITH a deck (an extension)
 using Toolkit.Rules.BlackJack;
@@ -9,7 +10,9 @@ var random = new Random();
 
 var myDeck = Deck.CreateStandardDeck();
 
-myDeck.Shuffle(random);
+// shuffle doesn't care HOW it gets done, just THAT it gets done
+myDeck.Shuffle(random, ShuffleAlgorithm.Default); //method with a noun for a name - a strategy for shuffling,
+                                                  //tells you how to shuffle the cards
 
 myDeck.PlayWar(random);
 
