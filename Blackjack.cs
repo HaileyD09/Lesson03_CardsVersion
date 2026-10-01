@@ -73,6 +73,7 @@ public static class BlackjackRules
                     }
                     Console.WriteLine($"Dealer drew: {newCard}");
                 }
+                Console.WriteLine("Dealer's total: " + dealerTotal);  
                 
                 if (dealerTotal > 21)
                 {
