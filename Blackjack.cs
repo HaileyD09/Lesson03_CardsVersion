@@ -11,8 +11,63 @@ public static class BlackjackRules
         public void PlayBlackJack(Random random)
         {
             deck.Shuffle(random);
-            Deck player1 = deck;
-            Deck player2 = deck.Split();
+            var playerHand = deck.Deal(2);
+            var dealerHand = deck.Deal(2);
+            Console.WriteLine($"Your hand: {string.Join(", ", playerHand)}");
+            Console.WriteLine($"Dealer shows: {dealerHand[0]}");
+            var playerTotal = playerHand.Sum(card => card.BlackjackValue);
+            var dealerTotal = dealerHand.Sum(card => card.BlackjackValue);
+            Console.WriteLine($"Your total: {playerTotal}");
+            
+            var input = "h";
+            while (input == "h" && playerTotal <= 21)
+            {
+                Console.WriteLine("Hit or Stand? (h/s)");
+                input = Console.ReadLine();
+                
+                if (input == "h")
+                {
+                    var newCard = deck.DealOne();         // deal one card
+                    playerHand.Add(newCard);            // add it to the hand
+                    playerTotal = playerHand.Sum(card => card.BlackjackValue);  // recalculate total
+                    Console.WriteLine($"You drew: {newCard}");
+                    Console.WriteLine($"Your total: {playerTotal}");
+                }
+            }
+            
+            if (playerTotal > 21)
+            {
+                Console.WriteLine("Bust! You Lose!");
+            }
+            else
+            {
+                Console.WriteLine("Your final total: " + playerTotal);
+                
+                while (dealerTotal < 17)
+                {
+                    var newCard = deck.DealOne();
+                    dealerHand.Add(newCard);
+                    dealerTotal = dealerHand.Sum(card => card.BlackjackValue);
+                    Console.WriteLine($"Dealer drew: {newCard}");
+                }
+                
+                if (dealerTotal > 21)
+                {
+                    Console.WriteLine("Dealer Busts. You Won!");
+                }
+                else if (playerTotal > dealerTotal)
+                {
+                    Console.WriteLine("You Won!");
+                }
+                else if (dealerTotal > playerTotal)
+                {
+                    Console.WriteLine("You Lost. Dealer Wins.");
+                }
+                else
+                {
+                    Console.WriteLine("It's a Tie!");
+                }
+            }
         }
     }
     
