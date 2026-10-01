@@ -57,11 +57,13 @@ public static class BlackjackRules
                 }
                 else if (playerTotal > dealerTotal)
                 {
+                    Console.WriteLine("Dealer's Total: " + dealerTotal);
                     Console.WriteLine("You Won!");
                 }
                 else if (dealerTotal > playerTotal)
                 {
-                    Console.WriteLine("You Lost. Dealer Wins.");
+                    Console.WriteLine("Dealer's Total: " + dealerTotal);
+                    Console.WriteLine("You Lost.");
                 }
                 else
                 {

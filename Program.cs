@@ -11,6 +11,6 @@ var myDeck = Deck.CreateStandardDeck();
 
 myDeck.Shuffle(random);
 
-myDeck.PlayWar(random);
+//myDeck.PlayWar(random);
 
-//myDeck.PlayBlackJack(random);
+myDeck.PlayBlackJack(random);
