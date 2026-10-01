@@ -24,6 +24,11 @@ public static class BlackjackRules
             {
                 Console.WriteLine("Hit or Stand? (h/s)");
                 input = Console.ReadLine();
+                while (input != "h" && input != "s")
+                {
+                    Console.WriteLine("Invalid input! Please enter 'h' or 's'.");
+                    input = Console.ReadLine();
+                }
                 
                 if (input == "h")
                 {
