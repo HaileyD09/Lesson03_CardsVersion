@@ -43,13 +43,12 @@ public static class BlackjackRules
                     var newCard = deck.DealOne();         // deal one card
                     playerHand.Add(newCard);            // add it to the hand
                     playerTotal = playerHand.Sum(card => card.BlackjackValue);  // recalculate total
-                    Console.WriteLine($"You drew: {newCard}");
-                    Console.WriteLine($"Your total: {playerTotal}");
-                    
                     while (playerTotal > 21 && playerHand.Any(card => card.Value.Rank == 1))
                     {
                         playerTotal -= 10;
                     }
+                    Console.WriteLine($"You drew: {newCard}");
+                    Console.WriteLine($"Your total: {playerTotal}");
                     
                 }
                 
@@ -68,12 +67,11 @@ public static class BlackjackRules
                     var newCard = deck.DealOne();
                     dealerHand.Add(newCard);
                     dealerTotal = dealerHand.Sum(card => card.BlackjackValue);
-                    Console.WriteLine($"Dealer drew: {newCard}");
-                    
                     while (dealerTotal > 21 && dealerHand.Any(card => card.Value.Rank == 1))
                     {
                         dealerTotal -= 10;
                     }
+                    Console.WriteLine($"Dealer drew: {newCard}");
                 }
                 
                 if (dealerTotal > 21)
