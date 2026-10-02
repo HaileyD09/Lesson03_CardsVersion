@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/haileyduan/Robotics/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {}
+    "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {}
   },
   "projects": {
-    "/Users/haileyduan/Robotics/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {
+    "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/haileyduan/Robotics/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
+        "projectUniqueName": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
         "projectName": "Lesson03_ExtensionsAndConcerns",
-        "projectPath": "/Users/haileyduan/Robotics/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
-        "packagesPath": "/Users/haileyduan/.nuget/packages/",
-        "outputPath": "/Users/haileyduan/Robotics/Lesson03_CardsVersion/obj/",
+        "projectPath": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
+        "packagesPath": "/Users/loaner/.nuget/packages/",
+        "outputPath": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/haileyduan/.nuget/NuGet/NuGet.Config"
+          "/Users/loaner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/Users/loaner/.dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
