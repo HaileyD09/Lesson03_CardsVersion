@@ -21,6 +21,21 @@ public static class ShuffleAlgorithm
         //The deck is empty now, so top or bottom doesn't matter.
         deck.AddCardsOnBottom(cards);
     }
+    /// <summary>
+    /// What the hands do:
+    /// split in two,
+    /// - interleave cards one at a time weighted by how many cards remain in each half,
+    /// - push together
+    /// Which lines match which step:
+    /// Step 1: Split()
+    /// Step 2: the while loop with random.Next(total)
+    /// Step 3: AddCardsOnBottom(pile) 
+    /// One place the code differs from a person:
+    /// a real person can't calculate exact probabilities -- they just feel which thumb has more cards.
+    /// The code uses random.Next(total) to weight the drop mathematically.
+    /// </summary>
+    /// <param name="deck"></param>
+    /// <param name="random"></param>
 
     public static void RiffleShuffle(Deck deck, Random random)
     {
@@ -30,11 +45,20 @@ public static class ShuffleAlgorithm
 
         while (left.Count > 0 || right.Count > 0)
         {
-            var card = right.DealOne();
-            if (card is not null) pile.Add(card);
-            
-            card = left.DealOne();
-            if (card is not null) pile.Add(card);
+            var total = right.Count + left.Count;
+            var pick = random.Next(total);
+
+            if (pick < right.Count)
+            {
+                var card = right.DealOne();
+                if (card is not null) pile.Add(card);
+            }
+            else
+            {
+                var card = left.DealOne();
+                if (card is not null) pile.Add(card);
+            }
+        
         }
 
         deck.AddCardsOnBottom(pile);

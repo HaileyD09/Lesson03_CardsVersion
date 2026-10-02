@@ -10,7 +10,7 @@ public static class WarRules
         /// </summary>
         public void PlayWar(Random random)
         {
-            deck.Shuffle(random);
+            deck.Shuffle(random, ShuffleAlgorithm.Default);
             var player1 = deck.Split();
             var player2 = deck;
             var round = 0;

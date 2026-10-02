@@ -10,7 +10,7 @@ public static class BlackjackRules
         /// </summary>
         public void PlayBlackJack(Random random)
         {
-            deck.Shuffle(random);
+            deck.Shuffle(random, ShuffleAlgorithm.Default);
             var playerHand = deck.Deal(2);
             var dealerHand = deck.Deal(2);
             Console.WriteLine($"Your hand: {string.Join(", ", playerHand)}");
