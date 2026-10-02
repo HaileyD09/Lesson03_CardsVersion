@@ -24,7 +24,8 @@ Show("after ", myDeck);
 myDeck.Shuffle(random, ShuffleAlgorithm.Default); //method with a noun for a name - a strategy for shuffling,
                                                   //tells you how to shuffle the cards
 
-//myDeck.PlayWar(random);
+myDeck.PlayWar(random);
 
-//myDeck.PlayBlackJack(random);
+var newDeck = Deck.CreateStandardDeck();
+newDeck.PlayBlackJack(random);
 
