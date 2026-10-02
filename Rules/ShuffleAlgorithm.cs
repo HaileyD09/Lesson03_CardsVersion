@@ -41,7 +41,8 @@ public static class ShuffleAlgorithm
     {
         var left = deck.Split();   // top half
         var right = deck;          // bottom half
-        List<Card> pile = [];      // empty pile to collect cards
+        //List<Card> pile = [];      // empty pile to collect cards
+        Deck pile = Deck.CreateEmpty();
 
         while (left.Count > 0 || right.Count > 0)
         {
@@ -51,17 +52,17 @@ public static class ShuffleAlgorithm
             if (pick < right.Count)
             {
                 var card = right.DealOne();
-                if (card is not null) pile.Add(card);
+                if (card is not null) pile.AddCardsOnBottom([card]);
             }
             else
             {
                 var card = left.DealOne();
-                if (card is not null) pile.Add(card);
+                if (card is not null) pile.AddCardsOnBottom([card]);
             }
         
         }
 
-        deck.AddCardsOnBottom(pile);
+        deck.AddCardsOnBottom(pile.Deal(pile.Count));
     }
     
 }

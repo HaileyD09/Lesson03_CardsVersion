@@ -8,6 +8,8 @@ public record Deck
 
     private List<Card> _cards;
     
+    public static Deck CreateEmpty() => new Deck(new List<Card>());
+    
     private Deck(List<Card> fromCards) => _cards = fromCards;
 
     private Deck()
