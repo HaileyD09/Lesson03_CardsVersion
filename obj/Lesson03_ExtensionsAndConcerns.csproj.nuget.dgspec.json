@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {}
+    "/Users/haileyduan/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {}
   },
   "projects": {
-    "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {
+    "/Users/haileyduan/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
+        "projectUniqueName": "/Users/haileyduan/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
         "projectName": "Lesson03_ExtensionsAndConcerns",
-        "projectPath": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
-        "packagesPath": "/Users/loaner/.nuget/packages/",
-        "outputPath": "/Users/loaner/Documents/GitHub/Lesson03_CardsVersion/obj/",
+        "projectPath": "/Users/haileyduan/Documents/GitHub/Lesson03_CardsVersion/Lesson03_ExtensionsAndConcerns.csproj",
+        "packagesPath": "/Users/haileyduan/.nuget/packages/",
+        "outputPath": "/Users/haileyduan/Documents/GitHub/Lesson03_CardsVersion/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/loaner/.nuget/NuGet/NuGet.Config"
+          "/Users/haileyduan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/loaner/.dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/Users/haileyduan/.dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
